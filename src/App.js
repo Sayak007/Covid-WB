@@ -1,26 +1,58 @@
 import React from 'react';
-import logo from './logo.svg';
+import { Column, Row } from 'simple-flexbox';
+import { StyleSheet, css } from 'aphrodite';
+import SidebarComponent from './components/sidebar/SidebarComponent';
+import HeaderComponent from './components/header/HeaderComponent';
+import Dashboard from './components/content/Dashboard';
 import './App.css';
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+const styles = StyleSheet.create({
+    container: {
+        height: '100%',
+        minHeight: '100vh'
+    },
+    content: {
+        marginTop: 54
+    },
+    mainBlock: {
+        backgroundColor: '#F7F8FC',
+        padding: 30
+    }
+});
+
+class App extends React.Component {
+
+    state = { selectedItem: 'Dashboard' };
+
+    componentDidMount() {
+        window.addEventListener('resize', this.resize);
+    }
+
+    componentWillUnmount() {
+        window.removeEventListener('resize', this.resize);
+    }
+
+    resize = () => this.forceUpdate();
+
+    render() {
+        const { selectedItem } = this.state;
+        return (
+            <Row className={css(styles.container)}>
+                <SidebarComponent selectedItem={selectedItem} onChange={(selectedItem) => this.setState({ selectedItem })} />
+                <Column flexGrow={1} className={css(styles.mainBlock)}>
+                    <HeaderComponent title={selectedItem} />
+                    <div className={css(styles.content)}>
+                        {(() => {
+                            if(selectedItem=="Dashboard")
+                                return <Dashboard />;
+                            //if(selectedItem=="Dashboard")
+
+                        })()}
+                    </div>
+                </Column>
+            </Row>
+        );
+    }
 }
 
 export default App;
