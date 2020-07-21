@@ -4,7 +4,7 @@ import { StyleSheet, css } from 'aphrodite/no-important';
 
 const styles = StyleSheet.create({
     container: {
-        backgroundColor: '#FFFFFF',
+        backgroundColor: '#fff',
         border: '1px solid #DFE0EB',
         borderRadius: 4,
         cursor: 'pointer',

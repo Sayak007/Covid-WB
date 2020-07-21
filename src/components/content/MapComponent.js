@@ -1,6 +1,12 @@
 import React from 'react';
 import { Column, Row } from 'simple-flexbox';
 import { StyleSheet, css } from 'aphrodite';
+import {
+    ComposableMap,
+    ZoomableGroup,
+    Geographies,
+    Geography,
+  } from "react-simple-maps"
 //import LineChart from 'react-svg-line-chart'
 import data from './WB.json'
 
@@ -91,13 +97,23 @@ const styles = StyleSheet.create({
     }
 });
 
-class TodayTrendsComponent extends React.Component {
+class MapComponent extends React.Component {
 
     render() {
         return (
             <Row flexGrow={1} className={css(styles.container)}
                 horizontal="center" breakpoints={{ 1024: 'column' }}>
-                
+                <div>
+                    <ComposableMap>
+                    <ZoomableGroup>
+                        <Geographies geography="./WB.json">
+                        {({geographies}) => geographies.map(geo =>
+                            <Geography key={geo.rsmKey} geography={geo} />
+                         )}
+                        </Geographies>
+                    </ZoomableGroup>
+                    </ComposableMap>
+                </div>
                     
                 
             </Row>
@@ -105,4 +121,4 @@ class TodayTrendsComponent extends React.Component {
     }
 }
 
-export default TodayTrendsComponent;
+export default MapComponent;
