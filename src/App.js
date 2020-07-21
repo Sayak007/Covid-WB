@@ -43,7 +43,7 @@ class App extends React.Component {
                     <HeaderComponent title={selectedItem} />
                     <div className={css(styles.content)}>
                         {(() => {
-                            if(selectedItem=="Dashboard")
+                            if(selectedItem==="Dashboard")
                                 return <Dashboard />;
                             //if(selectedItem=="Dashboard")
 

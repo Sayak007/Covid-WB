@@ -45,28 +45,48 @@ const styles = StyleSheet.create({
     }
 });
 
-function Dashboard() {
-    return (
-        <Column>
-            <Row className={css(styles.cardsContainer)} wrap flexGrow={1} horizontal="space-between" breakpoints={{ 768: 'column' }}>
-                <Row className={css(styles.cardRow)} wrap flexGrow={1} horizontal="space-between" breakpoints={{ 384: 'column' }}>
-                    <MiniCardComponent className={css(styles.miniCardContainer)} title="Active" value="60" />
-                    <MiniCardComponent className={css(styles.miniCardContainer)} title="Confirmed" value="16" />
+class Dashboard extends React.Component{
+    state = {
+        loading: true,
+        confirmed:null,
+        deceased:null,
+        recovered:null,
+        active:null,
+    };
+    
+    async componentDidMount(){
+        const url = "https://api.covid19india.org/v4/data.json";
+        const response = await fetch(url);
+        const data = await response.json();
+        this.setState({ confirmed: data['WB']['total']['confirmed'], loading: false });
+        this.setState({ deceased: data['WB']['total']['deceased'], loading: false });
+        this.setState({ recovered: data['WB']['total']['recovered'], loading: false });
+        this.setState({ active: this.state.confirmed-this.state.recovered-this.state.deceased, loading: false });
+        //console.log(data['WB']['total']);
+    }
+    render(){
+        return (
+            <Column>
+                <Row className={css(styles.cardsContainer)} wrap flexGrow={1} horizontal="space-between" breakpoints={{ 768: 'column' }}>
+                    <Row className={css(styles.cardRow)} wrap flexGrow={1} horizontal="space-between" breakpoints={{ 384: 'column' }}>
+                        <MiniCardComponent className={css(styles.miniCardContainer)} title="Active" value={this.state.active} />
+                        <MiniCardComponent className={css(styles.miniCardContainer)} title="Confirmed" value={this.state.confirmed} />
+                    </Row>
+                    <Row className={css(styles.cardRow)} wrap flexGrow={1} horizontal="space-between" breakpoints={{ 384: 'column' }}>
+                        <MiniCardComponent className={css(styles.miniCardContainer)} title="Recovered" value={this.state.recovered} />
+                        <MiniCardComponent className={css(styles.miniCardContainer)} title="Deceased" value={this.state.deceased} />
+                    </Row>
                 </Row>
-                <Row className={css(styles.cardRow)} wrap flexGrow={1} horizontal="space-between" breakpoints={{ 384: 'column' }}>
-                    <MiniCardComponent className={css(styles.miniCardContainer)} title="Recovered" value="43" />
-                    <MiniCardComponent className={css(styles.miniCardContainer)} title="Deceased" value="64" />
+                <div className={css(styles.todayTrends)}>
+                    <TodayTrendsComponent />
+                </div>
+                <Row horizontal="space-between" className={css(styles.lastRow)} breakpoints={{ 1024: 'column' }}>
+                    <UnresolvedTicketsComponent containerStyles={styles.unresolvedTickets} />
+                    <TasksComponent containerStyles={styles.tasks} />
                 </Row>
-            </Row>
-            <div className={css(styles.todayTrends)}>
-                <TodayTrendsComponent />
-            </div>
-            <Row horizontal="space-between" className={css(styles.lastRow)} breakpoints={{ 1024: 'column' }}>
-                <UnresolvedTicketsComponent containerStyles={styles.unresolvedTickets} />
-                <TasksComponent containerStyles={styles.tasks} />
-            </Row>
-        </Column>
-    );
+            </Column>
+        );
+    }
 }
 
 export default Dashboard;
