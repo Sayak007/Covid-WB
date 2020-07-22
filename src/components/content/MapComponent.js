@@ -1,21 +1,22 @@
-import React from 'react';
-import { Column, Row } from 'simple-flexbox';
-import { StyleSheet, css } from 'aphrodite';
-import {
-    ComposableMap,
-    ZoomableGroup,
-    Geographies,
-    Geography,
-  } from "react-simple-maps"
+import React, { useState } from 'react';
+import { ComposableMap, Geographies, Geography,ZoomableGroup } from 'react-simple-maps';
+import { scaleQuantile } from 'd3-scale';
+import ReactTooltip from 'react-tooltip';
+import { Row,Column } from 'simple-flexbox';
+import { StyleSheet, css } from 'aphrodite/no-important';
+
+import LinearGradient from './LinearGradient.js';
+
 //import LineChart from 'react-svg-line-chart'
-import data from './WB.json'
+const INDIA_TOPO_JSON = require('./WB.json');
 
 const styles = StyleSheet.create({
     container: {
         backgroundColor: '#FFFFFF',
         border: '1px solid #DFE0EB',
         borderRadius: 4,
-        cursor: 'pointer'
+        cursor: 'pointer',
+        width:'50%'
     },
     graphContainer: {
         marginTop: 24,
@@ -96,29 +97,139 @@ const styles = StyleSheet.create({
         color: '#252733'
     }
 });
-
-class MapComponent extends React.Component {
-
-    render() {
-        return (
-            <Row flexGrow={1} className={css(styles.container)}
-                horizontal="center" breakpoints={{ 1024: 'column' }}>
-                <div>
-                    <ComposableMap>
-                    <ZoomableGroup>
-                        <Geographies geography="./WB.json">
-                        {({geographies}) => geographies.map(geo =>
-                            <Geography key={geo.rsmKey} geography={geo} />
-                         )}
-                        </Geographies>
-                    </ZoomableGroup>
-                    </ComposableMap>
-                </div>
-                    
-                
-            </Row>
-        );
+const PROJECTION_CONFIG = {
+    scale: 1400,
+    center: [88.081101, 24.125817] // always in [East Latitude, North Longitude]
+  };
+  
+  // Red Variants
+  const COLOR_RANGE = [
+    '#d9e0ff',
+    '#c9d3ff',
+    '#a8b8ff',
+    '#8fa3ff',
+    '#708aff',
+    '#4f6fff',
+    '#3358ff',
+    '#1943ff',
+    '#002fff'
+  ];
+  
+  const DEFAULT_COLOR = '#6B7B91';
+  
+  const getRandomInt = () => {
+    return parseInt(Math.random() * 100);
+  };
+  
+  const geographyStyle = {
+    default: {
+      outline: 'none'
+    },
+    hover: {
+      fill: '#ff0800',
+      transition: 'all 250ms',
+      outline: 'none'
+    },
+    pressed: {
+      outline: 'none'
     }
-}
+  };
+  
+  // will generate random heatmap data on every call
+  const getHeatMapData = () => {
+    return [
+      { dt_code: '330', district: 'Uttar Dinajpur', value: getRandomInt() },
+      { dt_code: '329', district: 'Cooch Behar', value: getRandomInt() },
+      { dt_code: '775', district: 'Kalimpong', value: getRandomInt() },
+      { dt_code: '777', district: 'Paschim Bardhaman', value: getRandomInt() },
+      { dt_code: '774', district: 'Alipurduar', value: getRandomInt() },
+      { dt_code: '342', district: 'Kolkata', value: getRandomInt() },
+      { dt_code: '341', district: 'Howrah', value: getRandomInt() },
+      { dt_code: '338', district: 'Hooghly', value: getRandomInt() },
+      { dt_code: '337', district: 'North 24 Parganas', value: getRandomInt() },
+      { dt_code: '339', district: 'Bankura', value: getRandomInt() },
+      { dt_code: '340', district: 'Purulia', value: getRandomInt() },
+      { dt_code: '335', district: 'Purba Bardhaman', value: getRandomInt() },
+      { dt_code: '336', district: 'Nadia', value: getRandomInt() },
+      { dt_code: '334', district: 'Birbhum', value: getRandomInt() },
+      { dt_code: '333', district: 'Murshidabad', value: getRandomInt() },
+      { dt_code: '332', district: 'Malda', value: getRandomInt() },
+      { dt_code: '331', district: 'Dakshin Dinajpur', value: getRandomInt() },
+      { dt_code: '328', district: 'Jalpaiguri', value: getRandomInt() },
+      { dt_code: '327', district: 'Darjeeling', value: getRandomInt() },
+      { dt_code: '776', district: 'Jhargram', value: getRandomInt() },
+      { dt_code: '345', district: 'Purba Medinipur', value: getRandomInt() },
+      { dt_code: '344', district: 'Paschim Medinipur', value: getRandomInt() },
+      { dt_code: '343', district: 'South 24 Parganas', value: getRandomInt() }
+    ];
+  };
+  
+  function MapComponent() {
+    const [tooltipContent, setTooltipContent] = useState('');
+    const [data, setData] = useState(getHeatMapData());
+  
+    const gradientData = {
+      fromColor: COLOR_RANGE[0],
+      toColor: COLOR_RANGE[COLOR_RANGE.length - 1],
+      min: 0,
+      max: data.reduce((max, item) => (item.value > max ? item.value : max), 0)
+    };
+  
+    const colorScale = scaleQuantile()
+      .domain(data.map(d => d.value))
+      .range(COLOR_RANGE);
+  
+    const onMouseEnter = (geo, current = { value: 'NA' }) => {
+      return () => {
+        setTooltipContent(`${geo.properties.district}: ${current.value}`);
+      };
+    };
+  
+    const onMouseLeave = () => {
+      setTooltipContent('');
+    };
+  
+    /*const onChangeButtonClick = () => {
+      setData(getHeatMapData());
+    };*/
+  
+    return (
+      <Row flexGrow={1} className={css(styles.container)}horizontal="center" >
+        <div className="full-width-height container">
+            <h1 className="no-margin center">West Bengal</h1>
+            <ReactTooltip>{tooltipContent}</ReactTooltip>
+            <ComposableMap
+                projectionConfig={PROJECTION_CONFIG}
+                projection="geoMercator"
+                width={120}
+                height={260}
+                data-tip=""
+            >
+                <ZoomableGroup>
+                <Geographies geography={INDIA_TOPO_JSON}>
+                {({ geographies }) =>
+                    geographies.map(geo => {
+                    //console.log(geo.properties.dt_code);
+                    const current = data.find(s => s.dt_code === geo.properties.dt_code);
+                    return (
+                        <Geography
+                        key={geo.rsmKey}
+                        geography={geo}
+                        fill={current ? colorScale(current.value) : DEFAULT_COLOR}
+                        style={geographyStyle}
+                        onMouseEnter={onMouseEnter(geo, current)}
+                        onMouseLeave={onMouseLeave}
+                        />
+                    );
+                    })
+                }
+                </Geographies>
+                </ZoomableGroup>
+            </ComposableMap>
+            <LinearGradient data={gradientData} />
+        </div>
+      </Row>
+    );
+  }
 
 export default MapComponent;

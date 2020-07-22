@@ -16,7 +16,9 @@
     "react-simple-maps": "^2.1.2",
     "react-svg-line-chart": "^2.0.1",
     "simple-flexbox": "^2.3.1",
-    "styled-components": "^4.3.2"
+    "styled-components": "^4.3.2",
+    "react-tooltip": "latest",
+    "d3-scale": "^3.2.1"
   },
   "scripts": {
     "start": "react-scripts start",
