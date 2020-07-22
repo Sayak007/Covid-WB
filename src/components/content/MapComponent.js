@@ -16,7 +16,6 @@ const styles = StyleSheet.create({
         border: '1px solid #DFE0EB',
         borderRadius: 4,
         cursor: 'pointer',
-        width:'50%'
     },
     graphContainer: {
         marginTop: 24,
@@ -123,7 +122,7 @@ const PROJECTION_CONFIG = {
   
   const geographyStyle = {
     default: {
-      outline: 'none'
+      outline: 'blue'
     },
     hover: {
       fill: '#ff0800',
