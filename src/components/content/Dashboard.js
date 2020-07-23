@@ -3,6 +3,9 @@ import { Column, Row } from 'simple-flexbox';
 import { StyleSheet, css } from 'aphrodite/no-important';
 import MiniCardComponent from './MiniCardComponent';
 import MapComponent from './MapComponent';
+import ActiveMap from './ActiveMap';
+import DeceasedMap from './DeceasedMap';
+import RecoveredMap from './RecoveredMap';
 
 const styles = StyleSheet.create({
     cardsContainer: {
@@ -75,9 +78,31 @@ class Dashboard extends React.Component{
                         <MiniCardComponent className={css(styles.miniCardContainer)} title="Deceased" value={this.state.deceased} />
                     </Row>
                 </Row>
-                <div className={css(styles.map)}>
-                    <MapComponent />
-                </div>
+                <br></br>
+                <h2><center>WEST BENGAL MAP</center></h2>
+                <Row flexGrow={1} className={css(styles.container)}horizontal="space-between" breakpoints={{ 1024: 'column' }}>
+                    
+                    <Column>
+                        <div className={css(styles.map)}>
+                            <ActiveMap />
+                        </div>
+                    </Column>
+                    <Column>
+                        <div className={css(styles.map)}>
+                            <MapComponent />
+                        </div>
+                    </Column>
+                    <Column>
+                        <div className={css(styles.map)}>
+                            <RecoveredMap />
+                        </div>
+                    </Column>
+                    <Column>
+                        <div className={css(styles.map)}>
+                            <DeceasedMap />
+                        </div>
+                    </Column>
+                </Row>
             </Column>
         );
     }

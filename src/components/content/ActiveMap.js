@@ -105,15 +105,15 @@ const PROJECTION_CONFIG = {
   
   // Red Variants
   const COLOR_RANGE = [
-    '#d9e0ff',
-    '#c9d3ff',
-    '#a8b8ff',
-    '#8fa3ff',
-    '#708aff',
-    '#4f6fff',
-    '#3358ff',
-    '#1943ff',
-    '#002fff'
+    '#FFEEC5',
+    '#FFE7AF',
+    '#FFE19C',
+    '#FFDA86',
+    '#FFD575',
+    '#FFCF61',
+    '#FFC94C',
+    '#FFBF2A',
+    '#FFB200'
   ];
   
   const DEFAULT_COLOR = '#6B7B91';
@@ -174,7 +174,7 @@ const PROJECTION_CONFIG = {
     return arr;
   };
   
-  function MapComponent() {
+  function ActiveMap() {
     const [tooltipContent, setTooltipContent] = useState('');
     const [data1, setData1] = useState({ hits: [] });
     //console.log(data1['West Bengal']);
@@ -187,7 +187,7 @@ const PROJECTION_CONFIG = {
         //console.log(result.data['West Bengal']['districtData']);
         var arr=[];
           for (var i in result.data['West Bengal']['districtData'])
-            arr[i]=result.data['West Bengal']['districtData'][i]["confirmed"];
+            arr[i]=result.data['West Bengal']['districtData'][i]["active"];
             WB=arr;
             //console.log(WB);
           
@@ -218,7 +218,7 @@ const PROJECTION_CONFIG = {
         //var d=data1;
 
         var dist=geo.properties.district;
-        setTooltipContent(dist+": "+data1['West Bengal']['districtData'][geo.properties.district]['confirmed']);
+        setTooltipContent(dist+": "+data1['West Bengal']['districtData'][geo.properties.district]['active']);
       };
     };
   
@@ -235,7 +235,7 @@ const PROJECTION_CONFIG = {
         <Column wrap flexGrow={7} flexBasis="735px" className={css(styles.graphSection)}
                     breakpoints={{ 1024: { width: 'calc(100% - 48px)', flexBasis: 'auto' } }}>
         <div className="full-width-height container">
-            <h3 className="no-margin center"><center>CONFIRMED</center></h3>
+            <h3 className="no-margin center"><center>ACTIVE</center></h3>
             <ReactTooltip>{tooltipContent}</ReactTooltip>
             <ComposableMap
                 projectionConfig={PROJECTION_CONFIG}
@@ -272,4 +272,4 @@ const PROJECTION_CONFIG = {
     );
   }
 
-export default MapComponent;
+export default ActiveMap;
