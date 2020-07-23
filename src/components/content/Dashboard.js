@@ -78,8 +78,6 @@ class Dashboard extends React.Component{
                         <MiniCardComponent className={css(styles.miniCardContainer)} title="Deceased" value={this.state.deceased} />
                     </Row>
                 </Row>
-                <br></br>
-                <h2><center>WEST BENGAL MAP</center></h2>
                 <Row flexGrow={1} className={css(styles.container)}horizontal="space-between" breakpoints={{ 1024: 'column' }}>
                     
                     <Column>
