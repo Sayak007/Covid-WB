@@ -1,9 +1,10 @@
-import React, { useState } from 'react';
+import React, { useState,useEffect } from 'react';
 import { ComposableMap, Geographies, Geography,ZoomableGroup } from 'react-simple-maps';
 import { scaleQuantile } from 'd3-scale';
 import ReactTooltip from 'react-tooltip';
 import { Row,Column } from 'simple-flexbox';
 import { StyleSheet, css } from 'aphrodite/no-important';
+import axios from 'axios';
 
 import LinearGradient from './LinearGradient.js';
 
@@ -165,6 +166,20 @@ const PROJECTION_CONFIG = {
   
   function MapComponent() {
     const [tooltipContent, setTooltipContent] = useState('');
+    const [data1, setData1] = useState({ hits: [] });
+    //console.log(data1['West Bengal']);
+ 
+    useEffect(() => {
+      const fetchData = async () => {
+        const result = await axios(
+          'https://api.covid19india.org/state_district_wise.json',
+        );
+   
+        setData1(result.data);
+      };
+   
+      fetchData();
+    }, []);
     const [data, setData] = useState(getHeatMapData());
   
     const gradientData = {
@@ -180,7 +195,7 @@ const PROJECTION_CONFIG = {
   
     const onMouseEnter = (geo, current = { value: 'NA' }) => {
       return () => {
-        setTooltipContent(`${geo.properties.district}: ${current.value}`);
+        setTooltipContent(`District: ${geo.properties.district} \t Confirmed:${data1['West Bengal']['districtData'][geo.properties.district]['confirmed']}`);
       };
     };
   
