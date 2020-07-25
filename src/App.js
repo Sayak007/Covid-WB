@@ -4,6 +4,7 @@ import { StyleSheet, css } from 'aphrodite';
 import SidebarComponent from './components/sidebar/SidebarComponent';
 import HeaderComponent from './components/header/HeaderComponent';
 import Dashboard from './components/content/Dashboard';
+import Helpline from './components/content/Helpline';
 import './App.css';
 
 const styles = StyleSheet.create({
@@ -45,7 +46,8 @@ class App extends React.Component {
                         {(() => {
                             if(selectedItem==="Dashboard")
                                 return <Dashboard />;
-                            //if(selectedItem=="Dashboard")
+                            if(selectedItem=="Helpline")
+                                return <Helpline />;
 
                         })()}
                     </div>

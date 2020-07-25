@@ -1,0 +1,413 @@
+{
+    "hospital": [
+        {
+            "District": "State level",
+            "Name of Govt. Hospital": "M R Bangur DH & SSH",
+            "Total Beds": "670"
+        },
+        {
+            "District": "State level",
+            "Name of Govt. Hospital": "CNCI",
+            "Total Beds": "400"
+        },
+        {
+            "District": "State level",
+            "Name of Govt. Hospital": "AMRI Salt Lake",
+            "Total Beds": "64"
+        },
+        {
+            "District": "State level",
+            "Name of Govt. Hospital": "Desun Hospital, Kolkata",
+            "Total Beds": "113"
+        },
+        {
+            "District": "State level",
+            "Name of Govt. Hospital": "ID BG",
+            "Total Beds": "115"
+        },
+        {
+            "District": "State level",
+            "Name of Govt. Hospital": "KPC Medical College",
+            "Total Beds": "200"
+        },
+        {
+            "District": "State level",
+            "Name of Govt. Hospital": "Kolkata Medical College",
+            "Total Beds": "660"
+        },
+        {
+            "District": "Alipurduar",
+            "Name of Govt. Hospital": "Integrated Ayush (COVID 19) Hospital,",
+            "Total Beds": "100"
+        },
+        {
+            "District": "Bankura",
+            "Name of Govt. Hospital": "Onda SSH",
+            "Total Beds": "250"
+        },
+        {
+            "District": "Bankura",
+            "Name of Govt. Hospital": "Medicare General Hospital (NH)",
+            "Total Beds": "50"
+        },
+        {
+            "District": "Birbhum",
+            "Name of Govt. Hospital": "Glocal Hospital, Birbhum",
+            "Total Beds": "50"
+        },
+        {
+            "District": "Birbhum",
+            "Name of Govt. Hospital": "RMYF Royal Nursing Home & Diagnostic",
+            "Total Beds": "50"
+        },
+        {
+            "District": "Birbhum",
+            "Name of Govt. Hospital": "Madhumamata Lodge",
+            "Total Beds": "160"
+        },
+        {
+            "District": "Coochbehar",
+            "Name of Govt. Hospital": "Cooch Behar Mission Hospital",
+            "Total Beds": "110"
+        },
+        {
+            "District": "Dakshin Dinajpur",
+            "Name of Govt. Hospital": "Prayas Atreyi Eye Hospital",
+            "Total Beds": "30"
+        },
+        {
+            "District": "Darjeeling",
+            "Name of Govt. Hospital": "Chang Hospital",
+            "Total Beds": "100"
+        },
+        {
+            "District": "Darjeeling",
+            "Name of Govt. Hospital": "Desun CoVid Hospital",
+            "Total Beds": "160"
+        },
+        {
+            "District": "Darjeeling",
+            "Name of Govt. Hospital": "Medica Hospital",
+            "Total Beds": "110"
+        },
+        {
+            "District": "Darjeeling",
+            "Name of Govt. Hospital": "Medica Cancer Hospital",
+            "Total Beds": "50"
+        },
+        {
+            "District": "Darjeeling",
+            "Name of Govt. Hospital": "Nivedita Cancer Hospital",
+            "Total Beds": "64"
+        },
+        {
+            "District": "Hooghly",
+            "Name of Govt. Hospital": "Shramajibi Hospital",
+            "Total Beds": "100"
+        },
+        {
+            "District": "Hooghly",
+            "Name of Govt. Hospital": "ESI Hospital, Bandel",
+            "Total Beds": "250"
+        },
+        {
+            "District": "Hooghly",
+            "Name of Govt. Hospital": "Blue View Nursing Home",
+            "Total Beds": "30"
+        },
+        {
+            "District": "Hooghly",
+            "Name of Govt. Hospital": "Seven Rangers",
+            "Total Beds": "90"
+        },
+        {
+            "District": "Hooghly",
+            "Name of Govt. Hospital": "Kamala Roy",
+            "Total Beds": "50"
+        },
+        {
+            "District": "Hooghly",
+            "Name of Govt. Hospital": "Arambagh Nursing Home",
+            "Total Beds": "30"
+        },
+        {
+            "District": "Hooghly",
+            "Name of Govt. Hospital": "ESI Hospital, Gourhati",
+            "Total Beds": "216"
+        },
+        {
+            "District": "Howrah",
+            "Name of Govt. Hospital": "Sanjiban Hospital",
+            "Total Beds": "500"
+        },
+        {
+            "District": "Howrah",
+            "Name of Govt. Hospital": "ILS, Golabari",
+            "Total Beds": "100"
+        },
+        {
+            "District": "Howrah",
+            "Name of Govt. Hospital": "Satyabala IDH",
+            "Total Beds": "25"
+        },
+        {
+            "District": "Howrah",
+            "Name of Govt. Hospital": "ESI Hospital, Baltikuri",
+            "Total Beds": "230"
+        },
+        {
+            "District": "Howrah",
+            "Name of Govt. Hospital": "Uluberia ESI Hospital",
+            "Total Beds": "216"
+        },
+        {
+            "District": "Howrah",
+            "Name of Govt. Hospital": "Narayana Hospital Old Building, West",
+            "Total Beds": "Hospital 130"
+        },
+        {
+            "District": "Howrah",
+            "Name of Govt. Hospital": "TLJ Hospital",
+            "Total Beds": "250"
+        },
+        {
+            "District": "Jalpaiguri",
+            "Name of Govt. Hospital": "Biswabangla Krirangan",
+            "Total Beds": "200"
+        },
+        {
+            "District": "Jalpaiguri",
+            "Name of Govt. Hospital": "Agrasen Hospital",
+            "Total Beds": "41"
+        },
+        {
+            "District": "Jhargram",
+            "Name of Govt. Hospital": "Jhargram Night Shelter",
+            "Total Beds": "75"
+        },
+        {
+            "District": "Kalimpong",
+            "Name of Govt. Hospital": "Triveni Hospital",
+            "Total Beds": "150"
+        },
+        {
+            "District": "Malda",
+            "Name of Govt. Hospital": "EHC Glocal Hospital, Malda",
+            "Total Beds": "100"
+        },
+        {
+            "District": "Malda",
+            "Name of Govt. Hospital": "Dishari Nursing Home, Chanchal",
+            "Total Beds": "30"
+        },
+        {
+            "District": "Malda",
+            "Name of Govt. Hospital": "Manikchak Model School,Manikchak",
+            "Total Beds": "50"
+        },
+        {
+            "District": "Malda",
+            "Name of Govt. Hospital": "Trauma Care Centre",
+            "Total Beds": "125"
+        },
+        {
+            "District": "Murshidabad",
+            "Name of Govt. Hospital": "Old Matri Sadan Hospital",
+            "Total Beds": "120"
+        },
+        {
+            "District": "Murshidabad",
+            "Name of Govt. Hospital": "Monmohini Private Health Care",
+            "Total Beds": "100"
+        },
+        {
+            "District": "Murshidabad",
+            "Name of Govt. Hospital": "Gitaram Private Hospital",
+            "Total Beds": "100"
+        },
+        {
+            "District": "Murshidabad",
+            "Name of Govt. Hospital": "Lalbagh Rainbow Nursshing Home",
+            "Total Beds": "50"
+        },
+        {
+            "District": "Murshidabad",
+            "Name of Govt. Hospital": "Basumati Healthcare Private Ltd",
+            "Total Beds": "50"
+        },
+        {
+            "District": "Murshidabad",
+            "Name of Govt. Hospital": "Khristio Seba Sadan",
+            "Total Beds": "100"
+        },
+        {
+            "District": "Nadia",
+            "Name of Govt. Hospital": "SNR carnival Hospital",
+            "Total Beds": "120"
+        },
+        {
+            "District": "Nadia",
+            "Name of Govt. Hospital": "Glocal Hospital, Nadia",
+            "Total Beds": "150"
+        },
+        {
+            "District": "Nadia",
+            "Name of Govt. Hospital": "T B Hospital, Kalyani",
+            "Total Beds": "300"
+        },
+        {
+            "District": "North 24 Pgs",
+            "Name of Govt. Hospital": "Al Amin Gopalpur Nursing Home",
+            "Total Beds": "50"
+        },
+        {
+            "District": "North 24 Pgs",
+            "Name of Govt. Hospital": "GNRC",
+            "Total Beds": "84"
+        },
+        {
+            "District": "North 24 Pgs",
+            "Name of Govt. Hospital": "Megacity Nursing Home",
+            "Total Beds": "50"
+        },
+        {
+            "District": "North 24 Pgs",
+            "Name of Govt. Hospital": "Nehru Memorial Techno Global",
+            "Total Beds": "134"
+        },
+        {
+            "District": "North 24 Pgs",
+            "Name of Govt. Hospital": "Bibhuti Nursing Home",
+            "Total Beds": "10"
+        },
+        {
+            "District": "North 24 Pgs",
+            "Name of Govt. Hospital": "Subodh Mitra Cancer Hospital",
+            "Total Beds": "40"
+        },
+        {
+            "District": "North 24 Pgs",
+            "Name of Govt. Hospital": "COM & Sagar Datta Hospital",
+            "Total Beds": "500"
+        },
+        {
+            "District": "Paschim Bardhaman",
+            "Name of Govt. Hospital": "Sanaka Hospital",
+            "Total Beds": "400"
+        },
+        {
+            "District": "Paschim Bardhaman",
+            "Name of Govt. Hospital": "HLG Hospitals",
+            "Total Beds": "100"
+        },
+        {
+            "District": "Paschim Medinipur",
+            "Name of Govt. Hospital": "St. Joseph Hospital",
+            "Total Beds": "100"
+        },
+        {
+            "District": "Paschim Medinipur",
+            "Name of Govt. Hospital": "AYUSH Corona Hospital, Paschim",
+            "Total Beds": "80"
+        },
+        {
+            "District": "Paschim Medinipur",
+            "Name of Govt. Hospital": "Glocal Corona Hospital, Paschim",
+            "Total Beds": "50"
+        },
+        {
+            "District": "Paschim Medinipur",
+            "Name of Govt. Hospital": "Salboni SSH",
+            "Total Beds": "150"
+        },
+        {
+            "District": "Purba Burdwan",
+            "Name of Govt. Hospital": "Camri Hospital",
+            "Total Beds": "120"
+        },
+        {
+            "District": "Purba Burdwan",
+            "Name of Govt. Hospital": "Bengal Medica Hospital",
+            "Total Beds": "100"
+        },
+        {
+            "District": "Purba Mednipur",
+            "Name of Govt. Hospital": "Chandipur Multi Speciality Hospital",
+            "Total Beds": "150"
+        },
+        {
+            "District": "Purba Mednipur",
+            "Name of Govt. Hospital": "R C N Sanjiban Hospital",
+            "Total Beds": "50"
+        },
+        {
+            "District": "Purba Mednipur",
+            "Name of Govt. Hospital": "Baroma Multi speciality Hospital",
+            "Total Beds": "150"
+        },
+        {
+            "District": "Purulia",
+            "Name of Govt. Hospital": "Rotary Club of Purulia Service Centre",
+            "Total Beds": "60 home"
+        },
+        {
+            "District": "Purulia",
+            "Name of Govt. Hospital": "R Singhania Seva pratishtan Hospital",
+            "Total Beds": "60"
+        },
+        {
+            "District": "South 24 Parganas",
+            "Name of Govt. Hospital": "ESIC Medical College and Hospital",
+            "Total Beds": "470"
+        },
+        {
+            "District": "South 24 Parganas",
+            "Name of Govt. Hospital": "The Saharahat NH",
+            "Total Beds": "120"
+        },
+        {
+            "District": "South 24 Parganas",
+            "Name of Govt. Hospital": "Maa Durga NH",
+            "Total Beds": "50"
+        },
+        {
+            "District": "South 24 Parganas",
+            "Name of Govt. Hospital": "Canning Covid Hospital (Stadium)",
+            "Total Beds": "55"
+        },
+        {
+            "District": "South 24 Parganas",
+            "Name of Govt. Hospital": "Bharat Sevashram Sangha",
+            "Total Beds": "100"
+        },
+        {
+            "District": "South 24 Parganas",
+            "Name of Govt. Hospital": "Jagannath Gupta Medical College &",
+            "Total Beds": "100"
+        },
+        {
+            "District": "South 24 Parganas",
+            "Name of Govt. Hospital": "Ispat Cooperative Hospital",
+            "Total Beds": "125"
+        },
+        {
+            "District": "Uttar Dinajpur",
+            "Name of Govt. Hospital": "Mikki Megha Hospital",
+            "Total Beds": "52"
+        },
+        {
+            "District": "Uttar Dinajpur",
+            "Name of Govt. Hospital": "Jeevan Rekha Nursing Home",
+            "Total Beds": "45"
+        },
+        {
+            "District": "Uttar Dinajpur",
+            "Name of Govt. Hospital": "Islampur Urdu Academy",
+            "Total Beds": "100"
+        },
+        {
+            "District": "Grand total",
+            "Total Beds": "11,239"
+        }
+    ]
+}

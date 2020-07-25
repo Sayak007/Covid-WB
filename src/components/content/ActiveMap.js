@@ -156,7 +156,7 @@ const PROJECTION_CONFIG = {
         <Column wrap flexGrow={7} flexBasis="735px" className={css(styles.graphSection)}
                     breakpoints={{ 1024: { width: 'calc(100% - 48px)', flexBasis: 'auto' } }}>
         
-            <font color="#CF9000"><h3 className="no-margin center"><center>ACTIVE</center></h3></font>
+            <font color="#CF9000" face="Muli"><h3 className="no-margin center"><center>ACTIVE</center></h3></font>
             <ReactTooltip>{tooltipContent}</ReactTooltip>
             <ComposableMap
                 projectionConfig={PROJECTION_CONFIG}

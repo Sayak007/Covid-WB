@@ -1,0 +1,292 @@
+{
+    "column":[{ 
+            "dataField": "District",  
+            "text": "District" 
+        },
+        { 
+            "dataField": "Name of the Private Hospital",  
+            "text": "Name of the Private Hospital" 
+        },
+        { 
+            "dataField": "Beds",  
+            "text": "Beds" 
+        }
+    ],
+    "hospital":[
+        {
+            "District": "Kolkata",
+            "Name of the Private Hospital": "All Asia Medical Institute",
+            "Beds": "32"
+        },
+        {
+            "District": "Kolkata",
+            "Name of the Private Hospital": "AMRI Hospital, Dhakuria",
+            "Beds": "75"
+        },
+        {
+            "District": "Kolkata",
+            "Name of the Private Hospital": "AMRI Mukundapur",
+            "Beds": "40"
+        },
+        {
+            "District": "Kolkata",
+            "Name of the Private Hospital": "Apollo Gleneagles Hospital",
+            "Beds": "78"
+        },
+        {
+            "District": "Kolkata",
+            "Name of the Private Hospital": "Apollo Gleneagles Hospital {Satellite facility}",
+            "Beds": "50"
+        },
+        {
+            "District": "Kolkata",
+            "Name of the Private Hospital": "Appex Hospital [COVID Suspects]",
+            "Beds": "20"
+        },
+        {
+            "District": "Kolkata",
+            "Name of the Private Hospital": "B P Poddar",
+            "Beds": "98"
+        },
+        {
+            "District": "Kolkata",
+            "Name of the Private Hospital": "Belle Vue Clinic",
+            "Beds": "121"
+        },
+        {
+            "District": "N-24 Pgs.",
+            "Name of the Private Hospital": "Bhagirathi Neotia Hospital, Newtown",
+            "Beds": "2"
+        },
+        {
+            "District": "N-24 Pgs.",
+            "Name of the Private Hospital": "Calcutta Heart Clinic, Salt Lake",
+            "Beds": "30"
+        },
+        {
+            "District": "N-24 Pgs.",
+            "Name of the Private Hospital": "Calcutta Heart Clinic {Satellite facility}",
+            "Beds": "25"
+        },
+        {
+            "District": "Kolkata",
+            "Name of the Private Hospital": "Centenary Hospital, KoPT",
+            "Beds": "40"
+        },
+        {
+            "District": "Kolkata",
+            "Name of the Private Hospital": "Centenary Hospital, KoPT {Satellite facility}",
+            "Beds": "20"
+        },
+        {
+            "District": "N-24 Pgs.",
+            "Name of the Private Hospital": "Charnock Hospital",
+            "Beds": "59"
+        },
+        {
+            "District": "N-24 Pgs.",
+            "Name of the Private Hospital": "Charnock Hospital {Satellite facility}",
+            "Beds": "44"
+        },
+        {
+            "District": "Kolkata",
+            "Name of the Private Hospital": "Charring Cross",
+            "Beds": "38"
+        },
+        {
+            "District": "Kolkata",
+            "Name of the Private Hospital": "CMRI",
+            "Beds": "85"
+        },
+        {
+            "District": "N-24 Pgs.",
+            "Name of the Private Hospital": "Columbia Asia Hospital, Salt Lake",
+            "Beds": "7"
+        },
+        {
+            "District": "N-24 Pgs.",
+            "Name of the Private Hospital": "Dafodil Hospital",
+            "Beds": "58"
+        },
+        {
+            "District": "Kolkata",
+            "Name of the Private Hospital": "Divine Nursing Home",
+            "Beds": "25"
+        },
+        {
+            "District": "Kolkata",
+            "Name of the Private Hospital": "EEDF Medicare Centre (Sri Aurobindo)",
+            "Beds": "15"
+        },
+        {
+            "District": "Kolkata",
+            "Name of the Private Hospital": "Ekbalpur Nursing Home",
+            "Beds": "43"
+        },
+        {
+            "District": "Kolkata",
+            "Name of the Private Hospital": "Fortis Hospital",
+            "Beds": "52"
+        },
+        {
+            "District": "Kolkata",
+            "Name of the Private Hospital": "GD Hospital & Diabetes Institute",
+            "Beds": "25"
+        },
+        {
+            "District": "Kolkata",
+            "Name of the Private Hospital": "GD Hospital & Diabetes Institute {Satellite facility}",
+            "Beds": "18"
+        },
+        {
+            "District": "Kolkata",
+            "Name of the Private Hospital": "Genesis Hospital [COVID Suspects only]",
+            "Beds": "4"
+        },
+        {
+            "District": "Kolkata",
+            "Name of the Private Hospital": "Health Point Nursing Home",
+            "Beds": "20"
+        },
+        {
+            "District": "Kolkata",
+            "Name of the Private Hospital": "Hindustan Help point",
+            "Beds": "36"
+        },
+        {
+            "District": "N-24 Pgs.",
+            "Name of the Private Hospital": "ILS Dumdum",
+            "Beds": "70"
+        },
+        {
+            "District": "Kolkata",
+            "Name of the Private Hospital": "INK Kolkata",
+            "Beds": "4"
+        },
+        {
+            "District": "Kolkata",
+            "Name of the Private Hospital": "IRS",
+            "Beds": "10"
+        },
+        {
+            "District": "Kolkata",
+            "Name of the Private Hospital": "Khudiram Hospital",
+            "Beds": "9"
+        },
+        {
+            "District": "Kolkata",
+            "Name of the Private Hospital": "Kothari Medical Centre",
+            "Beds": "137"
+        },
+        {
+            "District": "Kolkata",
+            "Name of the Private Hospital": "Marwari Relief Society",
+            "Beds": "31"
+        },
+        {
+            "District": "Kolkata",
+            "Name of the Private Hospital": "Medica Superspecialty Hospital",
+            "Beds": "132"
+        },
+        {
+            "District": "Kolkata",
+            "Name of the Private Hospital": "Medica Superspecialty Hospital {Satellite facility}",
+            "Beds": "52"
+        },
+        {
+            "District": "Kolkata",
+            "Name of the Private Hospital": "Mercy Hospital",
+            "Beds": "40"
+        },
+        {
+            "District": "Kolkata",
+            "Name of the Private Hospital": "Nabajibin Nursing Home",
+            "Beds": "12"
+        },
+        {
+            "District": "Kolkata",
+            "Name of the Private Hospital": "Nightingale Hospital",
+            "Beds": "3"
+        },
+        {
+            "District": "Kolkata",
+            "Name of the Private Hospital": "North City Hospital",
+            "Beds": "12"
+        },
+        {
+            "District": "Kolkata",
+            "Name of the Private Hospital": "OHIO Hospital,",
+            "Beds": "20"
+        },
+        {
+            "District": "Kolkata",
+            "Name of the Private Hospital": "Peerless Hospital",
+            "Beds": "126"
+        },
+        {
+            "District": "Kolkata",
+            "Name of the Private Hospital": "R N Tagore IICS",
+            "Beds": "93"
+        },
+        {
+            "District": "Kolkata",
+            "Name of the Private Hospital": "R N Tagore IICS {Satellite facility}",
+            "Beds": "52"
+        },
+        {
+            "District": "Kolkata",
+            "Name of the Private Hospital": "Remedy Hospital",
+            "Beds": "25"
+        },
+        {
+            "District": "Kolkata",
+            "Name of the Private Hospital": "Royd Nursing Home",
+            "Beds": "6"
+        },
+        {
+            "District": "Kolkata",
+            "Name of the Private Hospital": "Ruby General Hospital",
+            "Beds": "60"
+        },
+        {
+            "District": "Kolkata",
+            "Name of the Private Hospital": "RSV",
+            "Beds": "10"
+        },
+        {
+            "District": "N-24 Pgs.",
+            "Name of the Private Hospital": "Sanjivani",
+            "Beds": "10"
+        },
+        {
+            "District": "Kolkata",
+            "Name of the Private Hospital": "Spandan Hospital",
+            "Beds": "15"
+        },
+        {
+            "District": "N-24 Pgs.",
+            "Name of the Private Hospital": "Tata Medical Centre [Treats COVID positive cancer patients only]",
+            "Beds": "15"
+        },
+        {
+            "District": "Kolkata",
+            "Name of the Private Hospital": "Woodlands Multispecialty Hospital",
+            "Beds": "67"
+        },
+        {
+            "District": "Kolkata",
+            "Name of the Private Hospital": "Woodlands Multispecialty Hospital {Satellite facility}",
+            "Beds": "54"
+        },
+        {
+            "District": "N-24 Pgs.",
+            "Name of the Private Hospital": "Zenith super specialist Hospital",
+            "Beds": "5"
+        },
+        {
+            "District": "Kolkata",
+            "Name of the Private Hospital": "Zodiac Medicare Pvt. Ltd. (Flemming Nursing Home)",
+            "Beds": "50"
+        }
+    ]
+}
