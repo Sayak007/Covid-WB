@@ -8,6 +8,7 @@ import { faHeartbeat,faHeart,faHeartBroken, faPlusSquare } from "@fortawesome/fr
 const styles = StyleSheet.create({
     yellow: {
         backgroundColor: '#FDE09C',
+        color: '#7D6006',
         border: '1px solid #DFE0EB',
         borderRadius: 4,
         cursor: 'pointer',
@@ -23,6 +24,7 @@ const styles = StyleSheet.create({
     },
     blue: {
         backgroundColor: '#9CDBFD',
+        color: '#06247D',
         border: '1px solid #DFE0EB',
         borderRadius: 4,
         cursor: 'pointer',
@@ -38,6 +40,7 @@ const styles = StyleSheet.create({
     },
     green: {
         backgroundColor: '#9CFD9C',
+        color: '#067D07',
         border: '1px solid #DFE0EB',
         borderRadius: 4,
         cursor: 'pointer',
@@ -53,6 +56,7 @@ const styles = StyleSheet.create({
     },
     red: {
         backgroundColor: '#FD9F9C',
+        color: '#CA0707',
         border: '1px solid #DFE0EB',
         borderRadius: 4,
         cursor: 'pointer',
@@ -66,8 +70,8 @@ const styles = StyleSheet.create({
             }
         }
     },
-    title: {
-        color: '#000',
+    titleactive: {
+        color: '#7D6006',
         fontFamily: 'Muli',
         fontStyle: 'normal',
         fontWeight: 'bold',
@@ -78,8 +82,74 @@ const styles = StyleSheet.create({
         minWidth: 102,
         textAlign: 'center'
     },
-    value: {
-        color: '#252733',
+    titlerecovered: {
+        color: '#067D07',
+        fontFamily: 'Muli',
+        fontStyle: 'normal',
+        fontWeight: 'bold',
+        fontSize: 19,
+        lineHeight: '24px',
+        letterSpacing: '0.4px',
+        marginBottom: 12,
+        minWidth: 102,
+        textAlign: 'center'
+    },
+    titleconfirmed: {
+        color: '#06247D',
+        fontFamily: 'Muli',
+        fontStyle: 'normal',
+        fontWeight: 'bold',
+        fontSize: 19,
+        lineHeight: '24px',
+        letterSpacing: '0.4px',
+        marginBottom: 12,
+        minWidth: 102,
+        textAlign: 'center'
+    },
+    titledeceased: {
+        color: '#CA0707',
+        fontFamily: 'Muli',
+        fontStyle: 'normal',
+        fontWeight: 'bold',
+        fontSize: 19,
+        lineHeight: '24px',
+        letterSpacing: '0.4px',
+        marginBottom: 12,
+        minWidth: 102,
+        textAlign: 'center'
+    },
+    valueactive: {
+        color: '#7D6006',
+        fontFamily: 'Muli',
+        fontStyle: 'normal',
+        fontWeight: 'bold',
+        fontSize: 40,
+        letterSpacing: '1px',
+        lineHeight: '50px',
+        textAlign: 'center'
+    },
+    valueconfirmed: {
+        color: '#06247D',
+        fontFamily: 'Muli',
+        fontStyle: 'normal',
+        fontWeight: 'bold',
+        fontSize: 40,
+        letterSpacing: '1px',
+        lineHeight: '50px',
+        textAlign: 'center'
+    },
+    valuerecovered: {
+        color: '#067D07',
+        fontFamily: 'Muli',
+        fontStyle: 'normal',
+        fontWeight: 'bold',
+        fontSize: 40,
+        letterSpacing: '1px',
+        lineHeight: '50px',
+        textAlign: 'center'
+    },
+    valuedeceased: {
+        color: '#CA0707',
         fontFamily: 'Muli',
         fontStyle: 'normal',
         fontWeight: 'bold',
@@ -108,7 +178,19 @@ function MiniCardComponent({ className = '', title, value ,color,icons}) {
     //const composedClassName = `${css(styles.{color})} ${className}`;
     return (
         <Column flexGrow={1} className={composedClassName} horizontal="center" vertical="center">
-            <span className={css(styles.title)}>{title}</span>
+            
+            {(() => {
+                if(icons=="active"){
+                    return <span className={css(styles.titleactive)}>{title}</span>;
+                }else if(icons=="confirmed"){
+                    return <span className={css(styles.titleconfirmed)}>{title}</span>;
+                }else if(icons=="recovered"){
+                    return <span className={css(styles.titlerecovered)}>{title}</span>;
+                }else if(icons=="deceased"){
+                    return <span className={css(styles.titledeceased)}>{title}</span>;
+                }
+            })()}
+            
             {(() => {
             if(icons=="active"){
                 return <FontAwesomeIcon icon={faHeartbeat} />;
@@ -120,7 +202,19 @@ function MiniCardComponent({ className = '', title, value ,color,icons}) {
                 return <FontAwesomeIcon icon={faHeartBroken} />;
             }
             })()}
-            <span className={css(styles.value)}>{value}</span>
+            
+            {(() => {
+                if(icons=="active"){
+                    return <span className={css(styles.valueactive)}>{value}</span>;
+                }else if(icons=="confirmed"){
+                    return <span className={css(styles.valueconfirmed)}>{value}</span>;
+                }else if(icons=="recovered"){
+                    return <span className={css(styles.valuerecovered)}>{value}</span>;
+                }else if(icons=="deceased"){
+                    return <span className={css(styles.valuedeceased)}>{value}</span>;
+                }
+            })()}
+            
         </Column>
     );
 }
