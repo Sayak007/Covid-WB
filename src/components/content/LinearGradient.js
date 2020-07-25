@@ -1,5 +1,19 @@
 import React from 'react';
 import PropTypes from 'prop-types';
+import { StyleSheet, css } from 'aphrodite/no-important';
+
+const styles = StyleSheet.create({
+  max: {
+    fontWeight : 'bold',
+    fontSize: '13px',
+    float: 'right',
+  },
+
+  min: {
+    fontWeight : 'bold',
+    fontSize: '13px'
+  },
+});
 
 const LinearGradient = props => {
   const { data } = props;
@@ -14,9 +28,9 @@ const LinearGradient = props => {
   return (
     <div>
       <div style={boxStyle} className="display-flex">
-        <span>{data.min} - </span>
+        <span className={css(styles.min)}>{data.min}</span>
         <span className="fill"></span>
-        <span>{data.max}</span>
+        <span className={css(styles.max)}>{data.max}</span>
       </div>
       <div style={{ ...boxStyle, ...gradientStyle }} className="mt8"></div>
     </div>

@@ -70,12 +70,12 @@ class Dashboard extends React.Component{
             <Column>
                 <Row className={css(styles.cardsContainer)} wrap flexGrow={1} horizontal="space-between" breakpoints={{ 768: 'column' }}>
                     <Row className={css(styles.cardRow)} wrap flexGrow={1} horizontal="space-between" breakpoints={{ 384: 'column' }}>
-                        <MiniCardComponent className={css(styles.miniCardContainer)} title="Active" value={this.state.active} />
-                        <MiniCardComponent className={css(styles.miniCardContainer)} title="Confirmed" value={this.state.confirmed} />
+                        <MiniCardComponent className={css(styles.miniCardContainer)} title="Active" value={this.state.active} color="yellow" icons="active"/>
+                        <MiniCardComponent className={css(styles.miniCardContainer)} title="Confirmed" value={this.state.confirmed} color="blue" icons="confirmed"/>
                     </Row>
                     <Row className={css(styles.cardRow)} wrap flexGrow={1} horizontal="space-between" breakpoints={{ 384: 'column' }}>
-                        <MiniCardComponent className={css(styles.miniCardContainer)} title="Recovered" value={this.state.recovered} />
-                        <MiniCardComponent className={css(styles.miniCardContainer)} title="Deceased" value={this.state.deceased} />
+                        <MiniCardComponent className={css(styles.miniCardContainer)} title="Recovered" value={this.state.recovered} color="green" icons="recovered"/>
+                        <MiniCardComponent className={css(styles.miniCardContainer)} title="Deceased" value={this.state.deceased} color="red" icons="deceased"/>
                     </Row>
                 </Row>
                 <Row flexGrow={1} className={css(styles.container)}horizontal="space-between" breakpoints={{ 1024: 'column' }}>

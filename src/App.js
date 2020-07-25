@@ -40,7 +40,7 @@ class App extends React.Component {
             <Row className={css(styles.container)}>
                 <SidebarComponent selectedItem={selectedItem} onChange={(selectedItem) => this.setState({ selectedItem })} />
                 <Column flexGrow={1} className={css(styles.mainBlock)}>
-                    <HeaderComponent title={selectedItem} />
+                    <HeaderComponent title={selectedItem+"  COVID-19 WEST BENGAL"} />
                     <div className={css(styles.content)}>
                         {(() => {
                             if(selectedItem==="Dashboard")

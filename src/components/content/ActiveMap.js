@@ -9,7 +9,7 @@ import axios from 'axios';
 import LinearGradient from './LinearGradient.js';
 
 //import LineChart from 'react-svg-line-chart'
-const INDIA_TOPO_JSON = require('./WB.json');
+const WB_TOPO_JSON = require('./WB.json');
 var WB=[];
 
 const styles = StyleSheet.create({
@@ -47,15 +47,6 @@ const PROJECTION_CONFIG = {
   ];
   
   const DEFAULT_COLOR = '#6B7B91';
-  
-  const getRandomInt = () => {
-    return parseInt(Math.random() * 100);
-  };
-
-  const value_dist=(dist)=>{
-    //console.log(WB[dist]);
-    return parseInt(WB.dist);
-  };
   
   const geographyStyle = {
     default: {
@@ -148,7 +139,7 @@ const PROJECTION_CONFIG = {
         //var d=data1;
 
         var dist=geo.properties.district;
-        setTooltipContent(dist+": "+data1['West Bengal']['districtData'][geo.properties.district]['active']);
+        setTooltipContent(`${dist}: ${data1['West Bengal']['districtData'][geo.properties.district]['active']}`);
       };
     };
   
@@ -175,7 +166,7 @@ const PROJECTION_CONFIG = {
                 data-tip=""
             >
                 <ZoomableGroup>
-                <Geographies geography={INDIA_TOPO_JSON}>
+                <Geographies geography={WB_TOPO_JSON}>
                 {({ geographies }) =>
                     geographies.map(geo => {
                     //console.log(geo.properties.dt_code);
