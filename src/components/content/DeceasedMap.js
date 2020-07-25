@@ -53,7 +53,7 @@ const PROJECTION_CONFIG = {
       outline: 'black'
     },
     hover: {
-      fill: '#ff0800',
+      fill: 'blue',
       transition: 'all 250ms',
       outline: 'none'
     },
