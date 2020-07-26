@@ -5,6 +5,7 @@ import Pvthospcomponent from './Pvthospcomponent';
 import GovtHospComponent from './GovtHospComponent';
 import Card from "react-bootstrap/Card";
 import Statehelpline from './Statehelpline';
+import PdfComponent from './PdfComponent';
 
 const styles = StyleSheet.create({
     cardsContainer: {
@@ -40,7 +41,7 @@ const styles = StyleSheet.create({
     tasks: {
         marginTop: 0,
         '@media (max-width: 1024px)': {
-            marginTop: 30,
+            marginTop: 15,
         }
     }
 });
@@ -52,6 +53,9 @@ class Helpline extends React.Component{
             <Column>
                 <Row className={css(styles.cardsContainer)} flexGrow={1} horizontal="space-between" breakpoints={{ 2048: 'column' }}>    
                     <div className={css(styles.map)}><Statehelpline /></div>
+                </Row>
+                <Row className={css(styles.cardsContainer,styles.tasks)} flexGrow={1} horizontal="space-between" breakpoints={{ 2048: 'column' }}>    
+                    <div className={css(styles.map)}><PdfComponent /></div>
                 </Row>
                 <Row className={css(styles.cardsContainer)} flexGrow={1} horizontal="space-between" breakpoints={{ 1024: 'column' }}>    
                     <div className={css(styles.map)}><GovtHospComponent /></div>
