@@ -5,8 +5,10 @@ import Logo from '../../assets/icon-logo';
 
 const styles = StyleSheet.create({
     container: {
-        marginLeft: 32,
-        marginRight: 32
+        marginTop:-100,
+        marginBottom:-100,
+        marginLeft: 5,
+        marginRight: 10,
     },
     title: {
         fontFamily: 'Muli',
@@ -17,7 +19,7 @@ const styles = StyleSheet.create({
         letterSpacing: '0.4px',
         color: '#A4A6B3',
         opacity: 0.7,
-        marginLeft: 12
+        marginLeft: -20
     }
 });
 

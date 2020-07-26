@@ -7,7 +7,7 @@ const styles = StyleSheet.create({
         backgroundColor: '#FFFFFF',
         border: '1px solid #DFE0EB',
         borderRadius: 4,
-        padding: '24px 32px 12px 32px'
+        padding: '24px 32px 12px 32px',
     },
     containerMobile: {
         padding: '12px 16px 6px 16px !important'
@@ -59,7 +59,7 @@ const styles = StyleSheet.create({
         fontFamily: 'Muli',
         fontStyle: 'normal',
         fontWeight: 'bold',
-        fontSize: 19,
+        fontSize: 25,
         lineHeight: '24px',
         letterSpacing: '0.4px',
         color: '#252733'

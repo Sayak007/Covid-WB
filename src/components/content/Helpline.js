@@ -4,6 +4,7 @@ import { StyleSheet, css } from 'aphrodite/no-important';
 import Pvthospcomponent from './Pvthospcomponent';
 import GovtHospComponent from './GovtHospComponent';
 import Card from "react-bootstrap/Card";
+import Statehelpline from './Statehelpline';
 
 const styles = StyleSheet.create({
     cardsContainer: {
@@ -49,7 +50,10 @@ class Helpline extends React.Component{
     render(){
         return (
             <Column>
-                <Row className={css(styles.cardsContainer)} flexGrow={1} horizontal="space-between" breakpoints={{ 768: 'column' }}>    
+                <Row className={css(styles.cardsContainer)} flexGrow={1} horizontal="space-between" breakpoints={{ 2048: 'column' }}>    
+                    <div className={css(styles.map)}><Statehelpline /></div>
+                </Row>
+                <Row className={css(styles.cardsContainer)} flexGrow={1} horizontal="space-between" breakpoints={{ 1024: 'column' }}>    
                     <div className={css(styles.map)}><GovtHospComponent /></div>
                     <div className={css(styles.map)}><Pvthospcomponent /></div>
                 </Row>

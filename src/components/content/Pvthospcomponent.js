@@ -1,10 +1,6 @@
 import React, { Component } from 'react';
 import { Column, Row } from 'simple-flexbox';
-import { StyleSheet, css } from 'aphrodite/no-important';
-import {BootstrapTable,TableHeaderColumn} from 'react-bootstrap-table';  
-import Card from "react-bootstrap/Card";
-import filterFactory, { textFilter } from 'react-bootstrap-table2-filter'; 
-import paginationFactory from 'react-bootstrap-table2-paginator';  
+import { StyleSheet, css } from 'aphrodite/no-important'; 
 //import './node_modules/react-bootstrap-table-next/dist/react-bootstrap-table2.min.css';
 
 
@@ -29,16 +25,16 @@ const styles = StyleSheet.create({
         backgroundColor: '#30C5C0',
         textColor: '#fff',
         fontWeight: 'bold',
-        border: '1px solid #000',
-        borderRadius: '15px;',
+        border: '#000',
+        borderRadius: '5px;',
         textAlign: 'center',
     },
     table:{
-        backgroundColor: '#A1FAA3',
+        backgroundColor: '#fff',
         textColor: '#000',
         //fontWeight: 'bold',
-        border: '1px solid #000',
-        borderRadius: '15px;',
+        border: '1px solid #A1D0FA',
+        borderRadius: '5px;',
         textAlign: 'center',
     },
     sc:{
@@ -62,17 +58,19 @@ class Pvthospcomponent extends React.Component{
                     <div className={css(styles.sc)}>
                     <table>
                         <thead  className={css(styles.tablehead)}>
-                            <td>District</td>
-                            <td>Name of the Private Hospital</td>
-                            <td>Beds</td>
+                            <tr className={css(styles.tablehead)}>
+                            <td className={css(styles.tablehead)}>District</td>
+                            <td className={css(styles.tablehead)}>Name of the Private Hospital</td>
+                            <td className={css(styles.tablehead)}>Beds</td></tr>
                         </thead>
-                        {WB_PVT_HOSP.hospital.map(row => (
-                            <tbody className={css(styles.table)}><tr>
-                            <td>{row['District']}</td>
-                            <td>{row['Name of the Private Hospital']}</td>
-                            <td>{row['Beds']}</td>
-                            </tr></tbody>
-                        ))}
+                        <tbody className={css(styles.table)}>
+                        {WB_PVT_HOSP.hospital.map((row,index) => (
+                            <tr className={css(styles.table)} key={index}>
+                            <td className={css(styles.table)}>{row['District']}</td>
+                            <td className={css(styles.table)}>{row['Name of the Private Hospital']}</td>
+                            <td className={css(styles.table)}>{row['Beds']}</td>
+                            </tr>
+                        ))}</tbody>
                     </table>
                     </div>
                 </font>

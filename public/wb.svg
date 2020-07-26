@@ -1,7 +1,6 @@
-import React from 'react';
+<!--?xml version="1.0" standalone="no"?-->
 
-export default () => (
-    <svg version="1.0" xmlns="http://www.w3.org/2000/svg" width="300.000000pt" height="215.000000pt" viewBox="0 0 300.000000 215.000000" preserveAspectRatio="xMidYMid meet">
+<svg version="1.0" xmlns="http://www.w3.org/2000/svg" width="300.000000pt" height="215.000000pt" viewBox="0 0 300.000000 215.000000" preserveAspectRatio="xMidYMid meet">
 <g transform="translate(0.000000,215.000000) scale(0.100000,-0.100000)" fill="#62CC80" stroke="none">
 <path d="M1506 2051 c-8 -12 3 -41 15 -41 28 0 51 -134 28 -157 -8 -8 -6 -17
 9 -33 37 -40 37 -69 0 -101 -18 -15 -37 -28 -43 -29 -13 0 -75 -64 -75 -77 0
@@ -39,10 +38,9 @@ export default () => (
 -51 20 -19 8 -37 9 -45 4 -23 -14 -48 -10 -66 11 -10 11 -25 20 -35 20 -10 0
 -18 5 -18 10 0 6 -6 10 -14 10 -8 0 -13 11 -13 25 0 33 -3 36 -53 42 -33 5
 -45 2 -52 -11 -10 -18 -63 -22 -74 -5 -3 6 -17 8 -29 5 -14 -4 -29 0 -39 9 -8
-8 -17 11 -20 6z" id="node1" className="node"></path>
+8 -17 11 -20 6z" id="node1" class="node"></path>
 </g>
 <g transform="translate(0.000000,215.000000) scale(0.100000,-0.100000)" fill="#FFFFFF" stroke="none">
 
 </g>
 </svg>
-);
