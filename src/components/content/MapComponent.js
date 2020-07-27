@@ -27,6 +27,9 @@ const styles = StyleSheet.create({
       width: 1,
       minWidth: 1,
   },
+  ct:{
+    fontFamily: 'Muli',
+  }
 });
 const PROJECTION_CONFIG = {
     scale: 1400,
@@ -139,7 +142,7 @@ const PROJECTION_CONFIG = {
         //var d=data1;
 
         var dist=geo.properties.district;
-        setTooltipContent(`${dist}: ${data1['West Bengal']['districtData'][geo.properties.district]['confirmed']}`);
+        setTooltipContent(`<b style="font-size:17px; font-family=Muli;">${dist}</b> <br> Confirmed: <b  style="font-size:15px;">${data1['West Bengal']['districtData'][geo.properties.district]['confirmed']}</b> </br>`);
       };
     };
   
@@ -157,7 +160,7 @@ const PROJECTION_CONFIG = {
                     breakpoints={{ 1024: { width: 'calc(100% - 48px)', flexBasis: 'auto' } }}>
         
             <font color="blue" face="Muli"><h3 className="no-margin center"><center>CONFIRMED</center></h3></font>
-            <ReactTooltip>{tooltipContent}</ReactTooltip>
+            <ReactTooltip className={css(styles.ct)} border="true" borderColor="#7900FF" textColor="black" backgroundColor="#DFC8F9" multiline='true' html='true'>{tooltipContent}</ReactTooltip>
             <ComposableMap
                 projectionConfig={PROJECTION_CONFIG}
                 projection="geoMercator"
