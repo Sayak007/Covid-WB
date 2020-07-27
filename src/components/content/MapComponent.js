@@ -142,7 +142,11 @@ const PROJECTION_CONFIG = {
         //var d=data1;
 
         var dist=geo.properties.district;
-        setTooltipContent(`<b style="font-size:17px; font-family=Muli;">${dist}</b> <br> Confirmed: <b  style="font-size:15px;">${data1['West Bengal']['districtData'][geo.properties.district]['confirmed']}</b> </br>`);
+        setTooltipContent(`<b style="font-size:25px; color:#7B0064;">${dist}</b> 
+        <br> <b  style="font-size:10px;"> Active: ${data1['West Bengal']['districtData'][geo.properties.district]['active']}</b> </br>
+        <b  style="font-size:17px; color:#002091;"> Confirmed: ${data1['West Bengal']['districtData'][geo.properties.district]['confirmed']}</b> 
+        <br> <b  style="font-size:10px;"> Recovered: ${data1['West Bengal']['districtData'][geo.properties.district]['recovered']}</b> </br>
+        <b  style="font-size:10px;"> Deceased: ${data1['West Bengal']['districtData'][geo.properties.district]['deceased']}</b> `);  
       };
     };
   
