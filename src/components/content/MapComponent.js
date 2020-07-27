@@ -53,7 +53,9 @@ const PROJECTION_CONFIG = {
   
   const geographyStyle = {
     default: {
-      outline: 'blue'
+      outline: 'blue',
+      //stroke: '#003078',
+      //strokeWidth: 0.5
     },
     hover: {
       fill: '#ff0800',

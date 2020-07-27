@@ -91,10 +91,11 @@ class PdfComponent extends React.Component{
     }
 
     render() {
+        var str= "as on " + this.state.date;
         return (
             <div className={css(styles.outer)}>
             <CardComponent containerStyles={this.props.containerStyles} title="Hospital Vacancies"
-                link="Updated by West Bengal Health & Family Welfare Department" subtitle="" subtitleTwo=""
+                link="Updated by West Bengal Health & Family Welfare Department" subtitle={str} subtitleTwo=""
                 items={[
                     this.renderStat('Government Hospital Vacancies', "Visit",'https://www.wbhealth.gov.in/uploaded_files/corona/Vacant_bed_status_as_on_'),
                     this.renderStat('Private Hospital Vacancies','Visit','https://www.wbhealth.gov.in/uploaded_files/corona/Vacancy_in_Pvt._Facilities_other_than_requisitioned_COVID_Hospital,_as_on_'),

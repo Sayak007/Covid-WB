@@ -19,7 +19,7 @@ const styles = StyleSheet.create({
         paddingRight: 32,
         paddingBottom: 18,
         paddingTop: 18,
-        maxHeight: 22,
+        maxHeight: 30,
         borderBottom: '1px solid #DFE0EB',
         ':last-child': {
             borderBottom: 'none'
