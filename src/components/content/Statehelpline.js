@@ -1,10 +1,7 @@
 import React from 'react';
-import { Row, Column } from 'simple-flexbox';
+import { Row } from 'simple-flexbox';
 import { StyleSheet, css } from 'aphrodite/no-important';
 import CardComponent from './CardComponent';
-import mySvg from './helpline.svg'
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import {faPhone,faAddressBook} from "@fortawesome/free-solid-svg-icons";
 
 const styles = StyleSheet.create({
     itemTitle: {
@@ -52,6 +49,8 @@ class Statehelpline extends React.Component {
                     this.renderStat('24x7 Helpline Number', '1800-313-444-222','033-2341-2600'),
                     this.renderStat('Control Rooms-Covid queries','033-2357-1075','1083,3636'),
                     this.renderStat('Websites','https://wb.gov.in/COVID-19.aspx','https://www.wbhealth.gov.in/'),
+                    this.renderStat('Direct Telehelpline Number','033-2357-6001'),
+                    this.renderStat('Kolkata Ambulance Number','033-4090-2929'),
                 ]}
             />
             </div>

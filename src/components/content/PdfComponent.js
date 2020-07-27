@@ -1,5 +1,5 @@
-import React, { Component,useState } from 'react';
-import { Column, Row } from 'simple-flexbox';
+import React from 'react';
+import { Row } from 'simple-flexbox';
 import { StyleSheet, css } from 'aphrodite/no-important'; 
 import CardComponent from './CardComponent';
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
@@ -25,16 +25,12 @@ const styles = StyleSheet.create({
         maxWidth: '20px',
         maxHeight: '20px',
     },
-    outer:{
-        //marginLeft: -16,
-        marginRight: 10,
-    },
     ww:{
         width:'470px'
     },
     outer:{
         //marginLeft: -16,
-        marginRight: 20,
+        marginRight: 10,
     },
     but:{
         background: '#0275d8',
@@ -83,7 +79,7 @@ class PdfComponent extends React.Component{
 
     renderStat(title, value,link) {
         var str;
-        if(title=='Private Hospital Vacancies'){
+        if(title==='Private Hospital Vacancies'){
             str=link + this.state.pvtpdfdate + "_.pdf"
         }else{
             str=link  + this.state.pdfdate + "_.pdf";

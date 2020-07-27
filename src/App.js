@@ -46,7 +46,7 @@ class App extends React.Component {
                         {(() => {
                             if(selectedItem==="Dashboard")
                                 return <Dashboard />;
-                            if(selectedItem=="Helpline")
+                            if(selectedItem==="Helpline")
                                 return <Helpline />;
 
                         })()}

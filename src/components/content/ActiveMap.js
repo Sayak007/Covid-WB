@@ -164,7 +164,7 @@ const PROJECTION_CONFIG = {
                     breakpoints={{ 1024: { width: 'calc(100% - 48px)', flexBasis: 'auto' } }}>
         
             <font color="#CF9000" face="Muli"><h3 className="no-margin center"><center>ACTIVE</center></h3></font>
-            <ReactTooltip className={css(styles.ct)} border="true" borderColor="#7900FF" textColor="black" backgroundColor="#DFC8F9" multiline='true' html='true'>{tooltipContent}</ReactTooltip>
+            <ReactTooltip className={css(styles.ct)} border={true} borderColor="#7900FF" textColor="black" backgroundColor="#DFC8F9" multiline={true} html={true}>{tooltipContent}</ReactTooltip>
             <ComposableMap
                 projectionConfig={PROJECTION_CONFIG}
                 projection="geoMercator"

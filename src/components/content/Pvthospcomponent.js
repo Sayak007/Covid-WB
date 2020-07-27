@@ -1,5 +1,4 @@
-import React, { Component } from 'react';
-import { Column, Row } from 'simple-flexbox';
+import React from 'react';
 import { StyleSheet, css } from 'aphrodite/no-important'; 
 //import './node_modules/react-bootstrap-table-next/dist/react-bootstrap-table2.min.css';
 

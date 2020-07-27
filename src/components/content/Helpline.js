@@ -1,9 +1,8 @@
-import React, { Component } from 'react';
+import React from 'react';
 import { Column, Row } from 'simple-flexbox';
 import { StyleSheet, css } from 'aphrodite/no-important';
 import Pvthospcomponent from './Pvthospcomponent';
 import GovtHospComponent from './GovtHospComponent';
-import Card from "react-bootstrap/Card";
 import Statehelpline from './Statehelpline';
 import PdfComponent from './PdfComponent';
 
