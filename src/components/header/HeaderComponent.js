@@ -2,8 +2,6 @@ import React from 'react';
 import { string } from 'prop-types';
 import { Row } from 'simple-flexbox';
 import { StyleSheet, css } from 'aphrodite';
-import IconSearch from '../../assets/icon-search';
-import IconBellNew from '../../assets/icon-bell-new';
 
 const styles = StyleSheet.create({
     avatar: {
@@ -62,6 +60,10 @@ const styles = StyleSheet.create({
         '@media (max-width: 768px)': {
             marginLeft: 12
         }
+    },
+    ic:{
+        maxWidth:150,
+        maxHeight:70
     }
 });
 
@@ -72,12 +74,8 @@ function HeaderComponent(props) {
             <span className={css(styles.title)}>{title}</span>
             <Row vertical="center">
                 <div className={css(styles.iconStyles)}>
-                    <IconSearch />
+                    <img src={process.env.PUBLIC_URL + '/tcs.png'} className={css(styles.ic)} alt=""></img>
                 </div>
-                <div className={css(styles.iconStyles)}>
-                    <IconBellNew />
-                </div>
-                <div className={css(styles.separator)}></div>
                 
             </Row>
         </Row>
