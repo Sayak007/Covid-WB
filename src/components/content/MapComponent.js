@@ -20,7 +20,7 @@ const styles = StyleSheet.create({
     cursor: 'pointer',
   },
   graphSection: {
-      padding: 24
+      padding: 24,width:210
   },
   separator: {
       backgroundColor: '#DFE0EB',

@@ -54,7 +54,7 @@ class PdfComponent extends React.Component{
         var date1 = yesterday.getDate(); //Current Date
         var month = yesterday.getMonth() + 1; //Current Month
         var year = yesterday.getFullYear(); //Current Year
-        var date1pdf,monthpdf,yearpdf;
+        var date1pdf,monthpdf;
         if(date1<10){
             date1pdf='0'+date1;
         }else{
@@ -66,14 +66,14 @@ class PdfComponent extends React.Component{
             monthpdf=month;
         }
         var dateObj = new Date(); 
-        yearpdf= year%100;
+        //yearpdf= year%100;
         // subtract one day from current time                           
         dateObj.setDate(dateObj.getDate() - 1); 
         this.setState({
             //Setting the value of the date time
             date:date1 + '/' + month + '/' + year,
             pdfdate:date1pdf + '.' + monthpdf + '_.' + year,
-            pvtpdfdate: date1pdf + '_.' + monthpdf + '_.' + (yearpdf)
+            pvtpdfdate: date1pdf + '_.' + monthpdf + '_.' + year
         });
     }
 
@@ -86,7 +86,7 @@ class PdfComponent extends React.Component{
         }
         return (<Row flexGrow={1} horizontal="space-between" vertical="center">
             <span className={css(styles.itemTitle)}>{title}</span>
-            <a href={str}><button className={css(styles.itemTitle, styles.but)}><font color='#fff' weight="bold" face="Muli"><FontAwesomeIcon icon={faExternalLinkSquareAlt} /> {value}</font></button></a>
+            <a href={str} target="_blank"><button className={css(styles.itemTitle, styles.but)}><font color='#fff' weight="bold" face="Muli"><FontAwesomeIcon icon={faExternalLinkSquareAlt} /> {value}</font></button></a>
         </Row>);
     }
 
@@ -98,7 +98,7 @@ class PdfComponent extends React.Component{
                 link="Updated by West Bengal Health & Family Welfare Department" subtitle={str} subtitleTwo=""
                 items={[
                     this.renderStat('Government Hospital Vacancies', "Visit",'https://www.wbhealth.gov.in/uploaded_files/corona/Vacant_bed_status_as_on_'),
-                    this.renderStat('Private Hospital Vacancies','Visit','https://www.wbhealth.gov.in/uploaded_files/corona/Vacancy_in_Pvt._Facilities_other_than_requisitioned_COVID_Hospital,_as_on_'),
+                    this.renderStat('Private Hospital Vacancies','Visit','https://www.wbhealth.gov.in/uploaded_files/corona/Vacancy_in_Pvt._Facilities_other_than_requisitioned_COVID_Hospital,_as_on-'),
                 ]}
             />
             </div>

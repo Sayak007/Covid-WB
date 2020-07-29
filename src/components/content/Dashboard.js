@@ -21,6 +21,7 @@ const styles = StyleSheet.create({
     miniCardContainer: {
         flexGrow: 1,
         marginRight: 30,
+        width:100,
         '@media (max-width: 768px,)': {
             marginTop: 30,
             maxWidth: 'none'
