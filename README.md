@@ -15,7 +15,8 @@ This section provides all the state helpline numbers provided by the government 
 Also the hospital bed vacancies which are regularly updated by the state are provided. This data gets updated every 24 hours and it depicts about the hospital bed availability which can help the users to choose in times of need.
 
 ## Screenshots:
-
+ ![image](https://github.com/Sayak007/Covid-WB/blob/master/Images/ss1.png)
+ ![image](https://github.com/Sayak007/Covid-WB/blob/master/Images/ss2.png)
 ## References:
 * https://www.covid19india.org
 * https://wb.gov.in/COVID-19.aspx
